@@ -62,6 +62,6 @@ public class SimpleAnnounce {
       manager.metaBuilder("btitle").aliases("alerttitle").build(),
       new BrigadierCommand(title)
     );
-    logger.info("SimpleAnnounce loaded.");
+    logger.info("Commands loaded.");
   }
 }
