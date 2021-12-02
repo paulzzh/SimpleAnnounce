@@ -15,11 +15,6 @@ public class BroadcastCommand {
 
   public int execute(CommandContext<CommandSource> ctx) {
     Component deserialized = Component.text()
-      .append(Component.text()
-        .color(NamedTextColor.GREEN)
-        .append(Component.text("[Broadcast] "))
-        .build()
-      )
       .append(LegacyComponentSerializer.legacyAmpersand().deserialize("&a" + ctx.getArgument("message", String.class)))
       .build();
     proxyServer.getAllPlayers().forEach(player -> player.sendMessage(deserialized));
